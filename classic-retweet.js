@@ -27,7 +27,7 @@
       var link = classicRetweetAction.find(".js-action-reply");
       link.removeClass("js-action-reply");
       link.removeAttr("data-modal");
-      var label = "Classic RT";
+      var label = "RT";
       link.attr("title", label);
       link.find("b").text(label);
       link.find("span").attr("class", "icon sm-rt");
