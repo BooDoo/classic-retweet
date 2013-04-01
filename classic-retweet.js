@@ -1,5 +1,10 @@
 (function($) {
   var enabled = "classic-retweet-enabled", script = null;
+  
+  //Hide location data, "expand" icon, "More..." action menu to clear up some real estate
+  var hideThings = $('<style id="hide-details-labels" class="js-user-style">.js-icon-container {visibility:hidden;} .js-details *, .more-tweet-actions {display:none !important;}</style>');
+  $('head').append(hideThings);
+  
   /*
   // To place caret at end of tweet
   var placeCaretAtEnd = function(el) {
