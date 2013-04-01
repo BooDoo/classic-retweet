@@ -30,7 +30,7 @@
       var label = "Classic RT";
       link.attr("title", label);
       link.find("b").text(label);
-      link.find("i").attr("class", "sm-rt");
+      link.find("span").attr("class", "icon sm-rt");
       replyAction.after(classicRetweetAction);
 
       link.on("click", function(event) {
