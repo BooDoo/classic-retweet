@@ -41,6 +41,7 @@
       link.on("click", function(event) {
         var tweet = $(this).closest(".tweet");
         var text = tweet.find(".js-tweet-text").first(); // guard as above
+        var replyTo = tweet.data('tweetId'); //get tweet ID for in-reply to
         text.find("a").each(function(index) {
           $(this).text($(this).data("expanded-url"));
         });
@@ -52,6 +53,7 @@
           dialog.find("h3").text(title);
           dialog.find("#tweet-box-global").text(content).focus();
           dialog.find("textarea.tweet-box-shadow").val(content);
+          dialog.find(".in-reply-to-status-id").val(replyTo); //maintain reply chain
           // placeCaretAtEnd(dialog.find("#tweet-box-global").get(0));
         }
         // else use the old one
